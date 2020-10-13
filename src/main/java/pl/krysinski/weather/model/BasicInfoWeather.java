@@ -1,24 +1,28 @@
 package pl.krysinski.weather.model;
 
+import pl.krysinski.weather.model.openweatherApi.Weather_;
+
 import java.util.List;
 
 public class BasicInfoWeather {
 
     private String city;
     private Double temperature;
-    //    private List<String> weatherIcons = null;
     private Double windSpeed;
     private Integer pressure;
     private Integer humidity;
     private Integer cloudcover;
+    private String weatherIcon;
 
-    public BasicInfoWeather(String city, Double temperature, Double windSpeed, Integer pressure, Integer humidity, Integer cloudcover) {
+    public BasicInfoWeather(String city, Double temperature, Double windSpeed, Integer pressure, Integer humidity, Integer cloudcover, String weatherIcon) {
         this.city = city;
         this.temperature = temperature;
         this.windSpeed = windSpeed;
         this.pressure = pressure;
         this.humidity = humidity;
         this.cloudcover = cloudcover;
+        this.weatherIcon = weatherIcon;
+//        this.weatherIcons = weatherIcons;
     }
 
     public String getCity() {
@@ -34,7 +38,7 @@ public class BasicInfoWeather {
     }
 
     public void setTemperature(Double temperature) {
-        this.temperature = temperature - 273.15;
+        this.temperature = temperature;
     }
 
     public Double getWindSpeed() {
@@ -69,76 +73,33 @@ public class BasicInfoWeather {
         this.cloudcover = cloudcover;
     }
 
-    //    public BasicInfoWeather(BasicInfoWeatherBuilder basicWeatherInfoBuilder){
-//        this.city = basicWeatherInfoBuilder.city;
-//        this.temperature = basicWeatherInfoBuilder.temperature;
-////        this.weatherIcons = basicWeatherInfoBuilder.weatherIcons;
-//        this.windSpeed = basicWeatherInfoBuilder.windSpeed;
-//        this.pressure = basicWeatherInfoBuilder.pressure;
-//        this.humidity = basicWeatherInfoBuilder.humidity;
-//        this.cloudcover = basicWeatherInfoBuilder.cloudcover;
+//    public String getWeatherIcons() {
+//        return weatherIcons;
+//    }
+//
+//    public void setWeatherIcons(String weatherIcons) {
+//        this.weatherIcons = weatherIcons;
 //    }
 
+    public String getWeatherIcon() {
+        return weatherIcon;
+    }
 
-//    public static class BasicInfoWeatherBuilder {
-//        private String city;
-//        private Double temperature;
-//        private List<String> weatherIcons = null;
-//        private Double windSpeed;
-//        private Integer pressure;
-//        private Integer humidity;
-//        private Integer cloudcover;
-//
-//        public BasicInfoWeatherBuilder buildCity(String city) {
-//            this.city = city;
-//            return this;
-//        }
-//
-//        public BasicInfoWeatherBuilder buildTemperature(Double temperature) {
-//            this.temperature = temperature;
-//            return this;
-//        }
-//
-////        public BasicInfoWeatherBuilder buildWeatherIcons(List<String> weatherIcons) {
-////            this.weatherIcons = weatherIcons;
-////            return this;
-////        }
-//
-//        public BasicInfoWeatherBuilder buildWindSpeed(Double windSpeed) {
-//            this.windSpeed = windSpeed;
-//            return this;
-//        }
-//
-//
-//        public BasicInfoWeatherBuilder buildPressure(Integer pressure) {
-//            this.pressure = pressure;
-//            return this;
-//        }
-//        public BasicInfoWeatherBuilder buildHumidity(Integer humidity){
-//            this.humidity = humidity;
-//            return this;
-//        }
-//        public BasicInfoWeatherBuilder buildCloudcover(Integer cloudcover){
-//            this.cloudcover = cloudcover;
-//            return this;
-//        }
-//
-////
-////        public BasicInfoWeather buildBasicInfoWeather() {
-////            return new BasicInfoWeather(this);
-////
-////        }
+    public void setWeatherIcon(String weatherIcon) {
+        this.weatherIcon = weatherIcon;
+    }
 
     @Override
     public String toString() {
-        return "BasicInfoWeatherBuilder{" +
+        return "BasicInfoWeather{" +
                 "city='" + city + '\'' +
                 ", temperature=" + temperature +
                 ", windSpeed=" + windSpeed +
                 ", pressure=" + pressure +
                 ", humidity=" + humidity +
                 ", cloudcover=" + cloudcover +
+                ", weatherIcons='" + weatherIcon + '\'' +
                 '}';
     }
 }
-//}
+

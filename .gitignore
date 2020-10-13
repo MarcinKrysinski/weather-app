@@ -1,4 +1,4 @@
-HELP.md
+git remote add origin https://github.com/MarcinKrysinski/weather-app.gitHELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

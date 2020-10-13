@@ -83,7 +83,12 @@ public class Weather_ {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("id", id).append("main", main).append("description", description).append("icon", icon).append("additionalProperties", additionalProperties).toString();
+        return "Weather_{" +
+                "id=" + id +
+                ", main='" + main + '\'' +
+                ", description='" + description + '\'' +
+                ", icon='" + icon + '\'' +
+                ", additionalProperties=" + additionalProperties +
+                '}';
     }
-
 }
